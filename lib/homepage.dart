@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/cart.dart';
+import 'package:untitled/cartde/cart.dart';
 import 'package:untitled/mobilelist.dart';
 import 'package:untitled/profile.dart';
-import 'iphone13.dart';
-import 'iphone14.dart';
-import 'samsungs24ultra5g.dart';
-import 'googlepixel6pro5g.dart';
-import 'oneplus9pro.dart';
-import 'oneplusnordce35g.dart';
-import 'iphone15promax.dart';
-import 'oppoa78.dart';
+
+import 'mobiles/googlepixel6pro5g.dart';
+import 'mobiles/iphone13.dart';
+import 'mobiles/iphone14.dart';
+import 'mobiles/iphone15promax.dart';
+import 'mobiles/oneplus9pro.dart';
+import 'mobiles/oneplusnordce35g.dart';
+import 'mobiles/oppoa78.dart';
+import 'mobiles/samsungs24ultra5g.dart';
 
 class ECommerceApp extends StatelessWidget {
   @override
@@ -25,6 +26,7 @@ class ECommerceApp extends StatelessWidget {
     );
   }
 }
+
 class Product {
   final String name;
   final String condition;
@@ -64,49 +66,47 @@ class HomePage extends StatelessWidget {
     {
       'name': 'iPhone 13',
       'image':
-      'https://assets.sangeethamobiles.com/product_img/8538/1667547711_A7D.jpg',
+          'https://assets.sangeethamobiles.com/product_img/8538/1667547711_A7D.jpg',
       'price': '\₹54,900',
     },
     {
       'name': 'Samsung S24 Ultra 5G ',
       'image':
-      'https://www.reliancedigital.in/medias/Samsung-S-Series-Ultra-Mobile-Phone-494352159-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTk3OXxpbWFnZS9qcGVnfGltYWdlcy9oMzEvaGY0LzEwMTAyODc2NzY2MjM4LmpwZ3wwMmQyZmViZTk1YWNlNzU4YzZiNjAzN2VjNzFjOTM1NDEzYTQ1MDVhMmQ0NmExYTA2OGM1YzQ2MDM1NTJjYzY0',
+          'https://www.reliancedigital.in/medias/Samsung-S-Series-Ultra-Mobile-Phone-494352159-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTk3OXxpbWFnZS9qcGVnfGltYWdlcy9oMzEvaGY0LzEwMTAyODc2NzY2MjM4LmpwZ3wwMmQyZmViZTk1YWNlNzU4YzZiNjAzN2VjNzFjOTM1NDEzYTQ1MDVhMmQ0NmExYTA2OGM1YzQ2MDM1NTJjYzY0',
       'price': '\₹1,39,999',
     },
     {
       'name': 'Google Pixel 6 Pro 5G',
-      'image':
-      'https://m.media-amazon.com/images/I/71FpXTBHDnL.SL1500.jpg',
+      'image': 'https://m.media-amazon.com/images/I/71FpXTBHDnL.SL1500.jpg',
       'price': '\₹39,599',
     },
     {
       'name': 'OnePlus 9 Pro',
       'image':
-      'https://www.reliancedigital.in/medias/OnePlus-9-Pro-SmartPhones-491947280-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyOTI4MDB8aW1hZ2UvanBlZ3xpbWFnZXMvaGFhL2g4Zi85ODY5MTEzNzUzNjMwLmpwZ3xkZTI2MDIxYjUwNmEyY2E2YjQwOWFmNTQ3Y2Y4YjdiY2YyYjVmM2I3ZmQxZDZmOWQ2MjMzMWQ0NTU3YzQ1M2M0',
+          'https://www.reliancedigital.in/medias/OnePlus-9-Pro-SmartPhones-491947280-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyOTI4MDB8aW1hZ2UvanBlZ3xpbWFnZXMvaGFhL2g4Zi85ODY5MTEzNzUzNjMwLmpwZ3xkZTI2MDIxYjUwNmEyY2E2YjQwOWFmNTQ3Y2Y4YjdiY2YyYjVmM2I3ZmQxZDZmOWQ2MjMzMWQ0NTU3YzQ1M2M0',
       'price': '\₹46,316',
     },
     {
       'name': 'OnePlus Nord CE 3 5G',
       'image':
-      'https://m.media-amazon.com/images/I/41TmlehQnaL.SX300_SY300_QL70_FMwebp.jpg',
+          'https://m.media-amazon.com/images/I/41TmlehQnaL.SX300_SY300_QL70_FMwebp.jpg',
       'price': '\₹27,999',
     },
     {
       'name': 'Oppo A78',
       'image':
-      'https://m.media-amazon.com/images/I/510YrcEw3-L.SX300_SY300_QL70_FMwebp.jpg',
+          'https://m.media-amazon.com/images/I/510YrcEw3-L.SX300_SY300_QL70_FMwebp.jpg',
       'price': '\₹15,499',
     },
     {
       'name': 'Apple iPhone 15 Pro Max',
       'image':
-      'https://m.media-amazon.com/images/I/41zb7hwFUmL.SY445_SX342_QL70_FMwebp.jpg',
+          'https://m.media-amazon.com/images/I/41zb7hwFUmL.SY445_SX342_QL70_FMwebp.jpg',
       'price': '\₹1,56,900',
     },
     {
       'name': 'Apple iPhone 14 ',
-      'image':
-      'https://m.media-amazon.com/images/I/611mRs-imxL.SL1500.jpg',
+      'image': 'https://m.media-amazon.com/images/I/611mRs-imxL.SL1500.jpg',
       'price': '\₹65,999',
     },
     // Add more mobiles as needed
@@ -139,84 +139,78 @@ class HomePage extends StatelessWidget {
               mainAxisSpacing: 8.0,
             ),
             delegate: SliverChildBuilderDelegate(
-                  (BuildContext context, int index) {
+              (BuildContext context, int index) {
                 return GestureDetector(
-                    onTap: () {
-                      // Navigate to the respective product details page
-                      if (index == 0) {
-                        // iPhone 13 tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductDetailPage1(),
-                          ),
-                        );
-                      } else if (index == 1) {
-                        // iPhone 14 tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductDetailPage2(),
-                          ),
-                        );
-                      }
-                      else if (index == 2) {
-                        // iPhone 14 tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductDetailPage3(),
-                          ),
-                        );
-                      }
-                      else if (index == 3) {
-                        // iPhone 14 tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductDetailPage4(),
-                          ),
-                        );
-                      }
-                      else if (index == 4) {
-                        // iPhone 14 tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductDetailPage5(),
-                          ),
-                        );
-                      }
-                      else if (index == 5) {
-                        // iPhone 14 tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductDetailPage6(),
-                          ),
-                        );
-                      }
-                      else if (index == 6) {
-                        // iPhone 14 tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductDetailPage7(),
-                          ),
-                        );
-                      }
-                      else if (index == 7) {
-                        // iPhone 14 tapped
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductDetailPage8(),
-                          ),
-                        );
-                      }
+                  onTap: () {
+                    // Navigate to the respective product details page
+                    if (index == 0) {
+                      // iPhone 13 tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetailPage1(),
+                        ),
+                      );
+                    } else if (index == 1) {
+                      // iPhone 14 tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetailPage2(),
+                        ),
+                      );
+                    } else if (index == 2) {
+                      // iPhone 14 tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetailPage3(),
+                        ),
+                      );
+                    } else if (index == 3) {
+                      // iPhone 14 tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetailPage4(),
+                        ),
+                      );
+                    } else if (index == 4) {
+                      // iPhone 14 tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetailPage5(),
+                        ),
+                      );
+                    } else if (index == 5) {
+                      // iPhone 14 tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetailPage6(),
+                        ),
+                      );
+                    } else if (index == 6) {
+                      // iPhone 14 tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetailPage7(),
+                        ),
+                      );
+                    } else if (index == 7) {
+                      // iPhone 14 tapped
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetailPage8(),
+                        ),
+                      );
+                    }
 
-                      // Add similar blocks for other products as needed
-                    },
+                    // Add similar blocks for other products as needed
+                  },
                   child: Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12.0),
@@ -328,35 +322,31 @@ class ProductDetailPage extends StatelessWidget {
     SimilarProduct(
       productName: 'iPhone 13',
       imageUrl:
-      'https://assets.sangeethamobiles.com/product_img/8538/1667547711_A7D.jpg',
-
+          'https://assets.sangeethamobiles.com/product_img/8538/1667547711_A7D.jpg',
     ),
     SimilarProduct(
       productName: 'Samsung S24 Ultra 5G',
       imageUrl:
-      'https://www.reliancedigital.in/medias/Samsung-S-Series-Ultra-Mobile-Phone-494352159-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTk3OXxpbWFnZS9qcGVnfGltYWdlcy9oMzEvaGY0LzEwMTAyODc2NzY2MjM4LmpwZ3wwMmQyZmViZTk1YWNlNzU4YzZiNjAzN2VjNzFjOTM1NDEzYTQ1MDVhMmQ0NmExYTA2OGM1YzQ2MDM1NTJjYzY0',
-
+          'https://www.reliancedigital.in/medias/Samsung-S-Series-Ultra-Mobile-Phone-494352159-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTk3OXxpbWFnZS9qcGVnfGltYWdlcy9oMzEvaGY0LzEwMTAyODc2NzY2MjM4LmpwZ3wwMmQyZmViZTk1YWNlNzU4YzZiNjAzN2VjNzFjOTM1NDEzYTQ1MDVhMmQ0NmExYTA2OGM1YzQ2MDM1NTJjYzY0',
     ),
     SimilarProduct(
       productName: 'Google Pixel 6 Pro 5G',
-      imageUrl:
-      'https://m.media-amazon.com/images/I/71FpXTBHDnL.SL1500.jpg',
+      imageUrl: 'https://m.media-amazon.com/images/I/71FpXTBHDnL.SL1500.jpg',
     ),
     SimilarProduct(
       productName: 'Apple iPhone 15 Pro Max',
       imageUrl:
-      'https://m.media-amazon.com/images/I/41zb7hwFUmL.SY445_SX342_QL70_FMwebp.jpg',
+          'https://m.media-amazon.com/images/I/41zb7hwFUmL.SY445_SX342_QL70_FMwebp.jpg',
     ),
     SimilarProduct(
       productName: 'OnePlus Nord CE 3 5G',
       imageUrl:
-      'https://m.media-amazon.com/images/I/41TmlehQnaL.SX300_SY300_QL70_FMwebp.jpg',
+          'https://m.media-amazon.com/images/I/41TmlehQnaL.SX300_SY300_QL70_FMwebp.jpg',
     ),
     SimilarProduct(
       productName: 'Oppo A78',
       imageUrl:
-      'https://m.media-amazon.com/images/I/510YrcEw3-L.SX300_SY300_QL70_FMwebp.jpg',
-
+          'https://m.media-amazon.com/images/I/510YrcEw3-L.SX300_SY300_QL70_FMwebp.jpg',
     ),
     // Add more SimilarProduct instances as needed
   ];
@@ -505,10 +495,7 @@ class ProductDetailPage extends StatelessWidget {
         ],
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
-        onTap: (int index) {
-
-
-        },
+        onTap: (int index) {},
       ),
     );
   }

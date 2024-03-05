@@ -3,7 +3,7 @@ import 'package:untitled/homepage.dart';
 import 'package:untitled/mobilelist.dart';
 import 'package:untitled/profile.dart';
 
-import 'address.dart';
+import '../checkout/address.dart';
 
 class Product {
   final String name;
@@ -50,7 +50,7 @@ class Cart extends StatelessWidget {
         name: 'Sample Product 1',
         details: 'Product details 1',
         quantity: 2,
-        price: 19.99,
+        price: 19999,
         imageUrl:
             'https://static.toiimg.com/photo/80635304/Apple-iPhone-14-Pro-Max-512GB-6GB-RAM.jpg',
       ),
@@ -58,7 +58,7 @@ class Cart extends StatelessWidget {
         name: 'Sample Product 2',
         details: 'Product details 2',
         quantity: 1,
-        price: 29.99,
+        price: 29999,
         imageUrl:
             'https://static.toiimg.com/photo/80635304/Apple-iPhone-14-Pro-Max-512GB-6GB-RAM.jpg',
       ),

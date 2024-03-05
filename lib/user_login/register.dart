@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/add_info.dart';
+import 'package:untitled/homepage.dart';
 
-import 'firebase_authh.dart';
+import '../firebase_auth/firebase_authh.dart';
 
 class MyRegister extends StatefulWidget {
   const MyRegister({Key? key}) : super(key: key);
@@ -138,11 +138,10 @@ class _MyRegisterState extends State<MyRegister> {
           // Positioned widget for the second Container with "Enter your email" input
 
           Positioned(
-            top: MediaQuery.of(context).size.height /
-                2, // Adjust the top position as needed
-            left: 35, // Adjust the left position as needed
+            top: MediaQuery.of(context).size.height / 2,
+            left: 35,
             child: SizedBox(
-              width: 500,
+              width: 310,
               height: 57,
               child: Stack(
                 children: <Widget>[
@@ -166,30 +165,31 @@ class _MyRegisterState extends State<MyRegister> {
                     ),
                   ),
                   Positioned(
-                    top: 16,
-                    left: 21,
-                    child: SizedBox(
-                      width: 268, // Adjust width to fit the container
-                      height: 25, // Adjust height to fit the container
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 21.0),
                       child: TextField(
-                        controller: emailController,
+                        controller: emailController, // Assign the controller
                         decoration: const InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Enter your email',
+                          hintText: 'Enter email',
                           hintStyle: TextStyle(
                             color: Color.fromRGBO(0, 0, 0, 0.4),
                             fontFamily: 'Gorditas',
                             fontSize: 20,
                             fontWeight: FontWeight.normal,
                           ),
+                          border: InputBorder.none,
                         ),
                         style: const TextStyle(
-                          color: Color.fromRGBO(
-                              0, 0, 0, 0.8), // Change text color if needed
-                          fontSize: 20,
+                          color: Color.fromRGBO(0, 0, 0, 0.8),
                           fontFamily: 'Gorditas',
+                          fontSize: 20,
                           fontWeight: FontWeight.normal,
                         ),
+                        // Add onChanged or other properties as needed
                       ),
                     ),
                   ),
@@ -439,7 +439,7 @@ class _MyRegisterState extends State<MyRegister> {
       // User is successfully created, navigate to the home page
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => AddInfoPage()),
+        MaterialPageRoute(builder: (context) => HomePage()),
       );
     } else {
       // Some error occurred during sign-up

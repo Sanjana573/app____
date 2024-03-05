@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/cart.dart';
+import 'package:untitled/cartde/cart.dart';
 import 'package:untitled/homepage.dart';
 import 'package:untitled/profile.dart';
 
@@ -8,26 +8,26 @@ class MobilesPage extends StatelessWidget {
     {
       'name': 'OnePlus',
       'image':
-          'https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fHww/50',
-      'price': '\$599',
+          'https://i5.walmartimages.com/asr/e902f320-3654-4093-b409-1e90e36ac87f.75a623fea97c0b581412751ed255add4.jpeg',
+      'price': '\R\s 20,599',
     },
     {
       'name': 'Samsung',
       'image':
-          'https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fHww/50',
-      'price': '\$699',
+          'https://d2g44tvvp35wo2.cloudfront.net/photo/global/2022/02/09/Samsung_Galaxy-S22-Ultra_Burgundy.jpg',
+      'price': '\R\s 16,999',
     },
     {
       'name': 'iPhone',
       'image':
-          'https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fHww/50',
-      'price': '\$999',
+          'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-12-pro-max-blue-2020?wid=2000&hei=1897&fmt=jpeg&qlt=95&.v=1635202944000',
+      'price': '\R\s 99,999',
     },
     {
       'name': 'Redmi',
       'image':
-          'https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fHww/50',
-      'price': '\$599',
+          'https://alizune.com/wp-content/uploads/2021/04/Xiaomi-Redmi-Note-9T-5G-Daybreak-Purple-2048x2048.jpg',
+      'price': '\R\s 15,099',
     },
     // Add more mobiles as needed
   ];

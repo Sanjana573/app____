@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/samsungs24ultra5g.dart';
+import 'package:untitled/mobiles/samsungs24ultra5g.dart';
 
+import '../cartde/cart.dart';
+import '../homepage.dart';
+import '../mobilelist.dart';
+import '../profile.dart';
 import 'googlepixel6pro5g.dart';
 import 'iphone13.dart';
 import 'iphone14.dart';
@@ -50,19 +54,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ProductDetailPage(),
+      home: ProductDetailPage4(),
     );
   }
 }
 
-class ProductDetailPage extends StatelessWidget {
+class ProductDetailPage4 extends StatelessWidget {
   final Product product = Product(
-    name: 'iPhone 14 Pro Max',
+    name: 'OnePlus 9 pro',
     condition: 'Brand new',
     material: 'Plastic',
     category: 'Electronics, gadgets',
     itemNumber: 23421,
-    price: 2127999,
+    price: 46316,
     reviews: 32,
     soldQuantity: 154,
     rating: 4.5,
@@ -70,34 +74,33 @@ class ProductDetailPage extends StatelessWidget {
 
   final List<SimilarProduct> similarProducts = [
     SimilarProduct(
-      productName: 'Samsung S23 Ultra 5G',
+      productName: 'iPhone 13',
       imageUrl:
-          'https://cdn1.smartprix.com/rx-izLSMVlI0-w1200-h1200/zLSMVlI0.jpg',
+          'https://assets.sangeethamobiles.com/product_img/8538/1667547711_A7D.jpg',
     ),
     SimilarProduct(
-      productName: 'Phone 14 Pro',
+      productName: 'Samsung S24 Ultra 5G',
       imageUrl:
-          'https://static.toiimg.com/photo/80635304/Apple-iPhone-14-Pro-Max-512GB-6GB-RAM.jpg',
+          'https://www.reliancedigital.in/medias/Samsung-S-Series-Ultra-Mobile-Phone-494352159-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTk3OXxpbWFnZS9qcGVnfGltYWdlcy9oMzEvaGY0LzEwMTAyODc2NzY2MjM4LmpwZ3wwMmQyZmViZTk1YWNlNzU4YzZiNjAzN2VjNzFjOTM1NDEzYTQ1MDVhMmQ0NmExYTA2OGM1YzQ2MDM1NTJjYzY0',
     ),
     SimilarProduct(
-      productName: 'Pixel 8 Pro',
-      imageUrl:
-          'https://cdn.mos.cms.futurecdn.net/rDsWwogtufZ6wpYuRqE8XY-970-80.jpg',
+      productName: 'Google Pixel 6 Pro 5G',
+      imageUrl: 'https://m.media-amazon.com/images/I/71FpXTBHDnL._SL1500_.jpg',
     ),
     SimilarProduct(
-      productName: 'OnePlus 9',
+      productName: 'Apple iPhone 15 Pro Max',
       imageUrl:
-          'https://specifications-pro.com/wp-content/uploads/2020/10/OnePlus-9-1.jpg',
+          'https://m.media-amazon.com/images/I/41zb7hwFUmL._SY445_SX342_QL70_FMwebp_.jpg',
     ),
     SimilarProduct(
-      productName: 'Xiaomi Mi 11 Pro',
+      productName: 'OnePlus Nord CE 3 5G',
       imageUrl:
-          'https://www.teknofilo.com/wp-content/uploads/2021/01/Xiaomi-Mi-11-Pro.jpg',
+          'https://m.media-amazon.com/images/I/41TmlehQnaL._SX300_SY300_QL70_FMwebp_.jpg',
     ),
     SimilarProduct(
-      productName: 'Google Pixel 6',
+      productName: 'Oppo A78',
       imageUrl:
-          'https://mobidevices.com/images/2021/05/Google-Pixel-6-Pro_1.jpg',
+          'https://m.media-amazon.com/images/I/510YrcEw3-L._SX300_SY300_QL70_FMwebp_.jpg',
     ),
     // Add more SimilarProduct instances as needed
   ];
@@ -119,7 +122,8 @@ class ProductDetailPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Image.network(
-                'https://static.toiimg.com/photo/80635304/Apple-iPhone-14-Pro-Max-512GB-6GB-RAM.jpg'),
+              'https://www.reliancedigital.in/medias/OnePlus-9-Pro-SmartPhones-491947280-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyOTI4MDB8aW1hZ2UvanBlZ3xpbWFnZXMvaGFhL2g4Zi85ODY5MTEzNzUzNjMwLmpwZ3xkZTI2MDIxYjUwNmEyY2E2YjQwOWFmNTQ3Y2Y4YjdiY2YyYjVmM2I3ZmQxZDZmOWQ2MjMzMWQ0NTU3YzQ1M2M0',
+            ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -219,7 +223,6 @@ class ProductDetailPage extends StatelessWidget {
                       ),
                     ),
                   ),
-
                 ],
               ),
             ),
@@ -227,33 +230,52 @@ class ProductDetailPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0, // Set the index of the "Cart" tab
+        currentIndex: 2, // Set the index of the "Profile" tab
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            // backgroundColor: null, // Remove the blue color for home button
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.phone_android),
             label: 'Mobiles',
-            backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart,
-                color: Colors.grey), // Colored cart icon
+            icon: Icon(Icons.shopping_cart),
             label: 'Cart',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.login),
-            label: 'Login',
+            label: 'Profile',
           ),
         ],
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
         onTap: (int index) {
-
-
+          if (index == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+            );
+          }
+          if (index == 3) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfilePage()),
+            );
+          }
+          if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Cart()),
+            );
+          }
+          if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MobilesPage()),
+            );
+          }
         },
       ),
     );
@@ -333,9 +355,9 @@ class SimilarProductCard extends StatelessWidget {
               ),
             );
             break;
-        // Add more cases for other products as needed
+          // Add more cases for other products as needed
           default:
-          // Handle the default case if necessary
+            // Handle the default case if necessary
             break;
         }
       },

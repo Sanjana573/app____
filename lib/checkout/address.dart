@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/payment.dart';
+import 'package:untitled/checkout/payment.dart';
 
 class AddressEntryPage extends StatefulWidget {
   const AddressEntryPage({Key? key}) : super(key: key);

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/samsungs24ultra5g.dart';
+import 'package:untitled/mobiles/samsungs24ultra5g.dart';
 
-import 'cart.dart';
+import '../cartde/cart.dart';
+import '../homepage.dart';
+import '../mobilelist.dart';
+import '../profile.dart';
 import 'googlepixel6pro5g.dart';
-import 'homepage.dart';
 import 'iphone13.dart';
 import 'iphone14.dart';
-import 'mobilelist.dart';
+import 'iphone15promax.dart';
 import 'oneplusnordce35g.dart';
-import 'oppoa78.dart';
-import 'profile.dart';
 
 void main() {
   runApp(MyApp());
@@ -53,19 +53,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ProductDetailPage7(),
+      home: ProductDetailPage6(),
     );
   }
 }
 
-class ProductDetailPage7 extends StatelessWidget {
+class ProductDetailPage6 extends StatelessWidget {
   final Product product = Product(
-    name: 'iPhone 15 Pro Max',
+    name: 'Oppo A78',
     condition: 'Brand new',
     material: 'Plastic',
     category: 'Electronics, gadgets',
     itemNumber: 23421,
-    price: 156900,
+    price: 15499,
     reviews: 32,
     soldQuantity: 154,
     rating: 4.5,
@@ -75,35 +75,31 @@ class ProductDetailPage7 extends StatelessWidget {
     SimilarProduct(
       productName: 'iPhone 13',
       imageUrl:
-      'https://assets.sangeethamobiles.com/product_img/8538/1667547711_A7D.jpg',
-
+          'https://assets.sangeethamobiles.com/product_img/8538/1667547711_A7D.jpg',
     ),
     SimilarProduct(
       productName: 'Samsung S24 Ultra 5G',
       imageUrl:
-      'https://www.reliancedigital.in/medias/Samsung-S-Series-Ultra-Mobile-Phone-494352159-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTk3OXxpbWFnZS9qcGVnfGltYWdlcy9oMzEvaGY0LzEwMTAyODc2NzY2MjM4LmpwZ3wwMmQyZmViZTk1YWNlNzU4YzZiNjAzN2VjNzFjOTM1NDEzYTQ1MDVhMmQ0NmExYTA2OGM1YzQ2MDM1NTJjYzY0',
-
+          'https://www.reliancedigital.in/medias/Samsung-S-Series-Ultra-Mobile-Phone-494352159-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2NTk3OXxpbWFnZS9qcGVnfGltYWdlcy9oMzEvaGY0LzEwMTAyODc2NzY2MjM4LmpwZ3wwMmQyZmViZTk1YWNlNzU4YzZiNjAzN2VjNzFjOTM1NDEzYTQ1MDVhMmQ0NmExYTA2OGM1YzQ2MDM1NTJjYzY0',
     ),
     SimilarProduct(
       productName: 'Google Pixel 6 Pro 5G',
-      imageUrl:
-      'https://m.media-amazon.com/images/I/71FpXTBHDnL._SL1500_.jpg',
+      imageUrl: 'https://m.media-amazon.com/images/I/71FpXTBHDnL._SL1500_.jpg',
     ),
     SimilarProduct(
       productName: 'Apple iPhone 15 Pro Max',
       imageUrl:
-      'https://m.media-amazon.com/images/I/41zb7hwFUmL._SY445_SX342_QL70_FMwebp_.jpg',
+          'https://m.media-amazon.com/images/I/41zb7hwFUmL._SY445_SX342_QL70_FMwebp_.jpg',
     ),
     SimilarProduct(
       productName: 'OnePlus Nord CE 3 5G',
       imageUrl:
-      'https://m.media-amazon.com/images/I/41TmlehQnaL._SX300_SY300_QL70_FMwebp_.jpg',
+          'https://m.media-amazon.com/images/I/41TmlehQnaL._SX300_SY300_QL70_FMwebp_.jpg',
     ),
     SimilarProduct(
       productName: 'Oppo A78',
       imageUrl:
-      'https://m.media-amazon.com/images/I/510YrcEw3-L._SX300_SY300_QL70_FMwebp_.jpg',
-
+          'https://m.media-amazon.com/images/I/510YrcEw3-L._SX300_SY300_QL70_FMwebp_.jpg',
     ),
     // Add more SimilarProduct instances as needed
   ];
@@ -125,7 +121,7 @@ class ProductDetailPage7 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Image.network(
-              'https://m.media-amazon.com/images/I/41zb7hwFUmL._SY445_SX342_QL70_FMwebp_.jpg',
+              'https://m.media-amazon.com/images/I/510YrcEw3-L._SX300_SY300_QL70_FMwebp_.jpg',
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -226,7 +222,6 @@ class ProductDetailPage7 extends StatelessWidget {
                       ),
                     ),
                   ),
-
                 ],
               ),
             ),
@@ -359,9 +354,9 @@ class SimilarProductCard extends StatelessWidget {
               ),
             );
             break;
-        // Add more cases for other products as needed
+          // Add more cases for other products as needed
           default:
-          // Handle the default case if necessary
+            // Handle the default case if necessary
             break;
         }
       },

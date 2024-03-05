@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import 'firebase_authh.dart';
-import 'homepage.dart';
+import '../firebase_auth/firebase_authh.dart';
+import '../homepage.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({super.key});
@@ -194,15 +194,21 @@ class _MyLoginState extends State<MyLogin> {
           Positioned(
             top: MediaQuery.of(context).size.height / 1.7,
             left: 21,
-            child: const Text(
-              '             Forgot password?',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Color.fromRGBO(16, 16, 16, 1),
-                fontFamily: 'Gorditas',
-                fontSize: 23,
-                fontWeight: FontWeight.normal,
-                height: 1,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(
+                    context, 'forgot'); // Navigate to the login page
+              },
+              child: const Text(
+                '             Forgot password?',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color.fromRGBO(16, 16, 16, 1),
+                  fontFamily: 'Gorditas',
+                  fontSize: 23,
+                  fontWeight: FontWeight.normal,
+                  height: 1,
+                ),
               ),
             ),
           ),

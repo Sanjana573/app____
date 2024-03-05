@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'cart.dart';
-import 'homepage.dart';
-import 'mobilelist.dart';
-import 'profile.dart';
+import '../cartde/cart.dart';
+import '../homepage.dart';
+import '../mobilelist.dart';
+import '../profile.dart';
 
 class PaymentPage extends StatefulWidget {
   @override
@@ -110,7 +110,6 @@ class _PaymentPageState extends State<PaymentPage> {
                         labelText: 'Expiry Date',
                         hintText: 'MM/YY',
                       ),
-                      keyboardType: TextInputType.number,
                     ),
                   ),
                   SizedBox(width: 12),
@@ -270,23 +269,31 @@ class _PaymentPageState extends State<PaymentPage> {
 class PaymentConfirmationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Payment Confirmation'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.check_circle, color: Colors.green, size: 64),
-            SizedBox(height: 16),
-            Text(
-              'Payment Successful!',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-            ),
-            SizedBox(height: 8),
-            Text('Thank you for your purchase.'),
-          ],
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => HomePage()),
+        );
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Payment Confirmation'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.check_circle, color: Colors.green, size: 64),
+              SizedBox(height: 16),
+              Text(
+                'Payment Successful!',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              ),
+              SizedBox(height: 8),
+              Text('Thank you for your purchase.'),
+            ],
+          ),
         ),
       ),
     );
